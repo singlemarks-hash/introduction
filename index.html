@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>장서영 — 버킷리스트에 미친 청년 | CULTURE DESIGNER</title>
+<meta name="description" content="버킷리스트에 미친 청년, 컬처 디자이너 장서영과 13년차 나다움 공간 '           '(작은따옴표) 소개 포트폴리오">
+<meta property="og:title" content="장서영 — 버킷리스트에 미친 청년 | CULTURE DESIGNER">
+<meta property="og:description" content="12년째 버킷리스트를 적고, 이뤄온 사람. 유럽 살롱 무드에 버킷리스트가 어우러진 공간 '           '(작은따옴표).">
+<meta property="og:image" content="website_assets/photo.jpg">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --accent:   #8B6F47;
+  --dark:     #2B2B2B;
+  --gray:     #666666;
+  --bg-card:  #F5F1E8;
+  --bg-photo: #FAF7F0;
+  --white:    #FFFFFF;
+  --line:     #ECE7DC;
+  --radius:   16px;
+  --shadow:   0 2px 12px rgba(43,43,43,.06);
+  --shadow-h: 0 10px 30px rgba(43,43,43,.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:"Pretendard Variable", Pretendard, "Noto Sans KR", -apple-system, sans-serif;
+  color:var(--dark); background:var(--white);
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+  word-break:keep-all;
+}
+a { color:inherit; }
+img { max-width:100%; display:block; }
+.quote-brand { white-space:pre; }
+
+/* ---------- progress bar ---------- */
+#progress { position:fixed; top:0; left:0; height:3px; width:0; background:var(--accent); z-index:200; transition:width .1s linear; }
+
+/* ---------- top nav ---------- */
+.nav {
+  position:sticky; top:0; z-index:100;
+  background:rgba(255,255,255,.85); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner {
+  max-width:1080px; margin:0 auto; padding:0 24px;
+  height:64px; display:flex; align-items:center; gap:16px;
+}
+.nav-brand { font-weight:800; font-size:16px; letter-spacing:-.02em; white-space:nowrap; }
+.nav-brand .x { color:var(--gray); font-weight:400; margin:0 6px; }
+.nav-tabs {
+  display:flex; gap:4px; background:var(--bg-card); border-radius:99px; padding:4px; margin-left:auto;
+}
+.nav-tab {
+  border:0; background:transparent; cursor:pointer;
+  font:inherit; font-size:14px; font-weight:600; color:var(--gray);
+  padding:7px 18px; border-radius:99px; transition:all .25s;
+}
+.nav-tab.active { background:var(--white); color:var(--accent); box-shadow:var(--shadow); }
+.nav-cta {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--accent); color:#fff; text-decoration:none;
+  font-size:13.5px; font-weight:700; padding:9px 16px; border-radius:99px;
+  transition:transform .2s, box-shadow .2s; white-space:nowrap;
+}
+.nav-cta:hover { transform:translateY(-1px); box-shadow:var(--shadow-h); }
+@media (max-width:640px){
+  .nav-inner{ height:auto; flex-wrap:wrap; padding:10px 16px; gap:8px; }
+  .nav-cta{ display:none; }
+  .nav-tabs{ margin-left:auto; }
+}
+
+/* ---------- sub nav ---------- */
+.subnav {
+  position:sticky; top:64px; z-index:90;
+  background:rgba(255,255,255,.85); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.subnav-inner {
+  max-width:1080px; margin:0 auto; padding:10px 24px;
+  display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;
+}
+.subnav-inner::-webkit-scrollbar{ display:none; }
+.chip {
+  border:1px solid var(--line); background:var(--white); cursor:pointer;
+  font:inherit; font-size:13px; font-weight:600; color:var(--gray);
+  padding:6px 14px; border-radius:99px; white-space:nowrap; transition:all .2s;
+}
+.chip:hover { border-color:var(--accent); color:var(--accent); }
+@media (max-width:640px){ .subnav{ top:52px; } }
+
+/* ---------- layout ---------- */
+.page { display:none; }
+.page.active { display:block; animation:fadeIn .45s ease; }
+@keyframes fadeIn { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;} }
+.wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+section { padding:64px 0 8px; }
+@media (max-width:640px){ section{ padding:44px 0 4px; } }
+
+/* ---------- hero ---------- */
+.hero { padding:80px 0 40px; }
+.eyebrow {
+  display:inline-block; background:var(--bg-card); color:var(--accent);
+  font-size:12.5px; font-weight:700; letter-spacing:.14em;
+  padding:6px 14px; border-radius:99px; margin-bottom:20px;
+}
+.hero h1 { font-size:clamp(38px,6vw,58px); font-weight:800; letter-spacing:-.03em; line-height:1.15; }
+.hero h1 small { display:block; font-size:clamp(15px,2vw,19px); font-weight:500; color:var(--gray); letter-spacing:.06em; margin-top:8px; }
+.tagline {
+  display:inline-block; margin-top:22px;
+  font-size:clamp(17px,2.6vw,23px); font-weight:800; color:var(--accent);
+  padding-bottom:10px; border-bottom:4px solid var(--accent);
+}
+.hero-img { margin-top:36px; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-h); }
+.hero-img img { width:100%; max-height:460px; object-fit:cover; }
+
+/* ---------- section head ---------- */
+.sec-label { font-size:12.5px; font-weight:700; letter-spacing:.16em; color:var(--accent); margin-bottom:8px; }
+.sec-title { font-size:clamp(23px,3.4vw,32px); font-weight:800; letter-spacing:-.02em; margin-bottom:8px; }
+.sec-sub { color:var(--gray); font-size:15px; margin-bottom:24px; }
+.lead {
+  font-size:clamp(16.5px,2.2vw,20px); font-weight:500; line-height:1.7;
+  margin:4px 0 30px; max-width:860px;
+}
+.lead strong, .lead b { color:var(--accent); }
+
+/* ---------- tables ---------- */
+.tbl-card { background:var(--white); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); margin-bottom:28px; }
+table { width:100%; border-collapse:collapse; font-size:15px; }
+caption { text-align:left; font-weight:800; font-size:16.5px; padding:18px 20px 4px; color:var(--dark); caption-side:top; }
+caption .cap-note { font-weight:500; font-size:13px; color:var(--gray); margin-left:8px; }
+tbody th, tbody td { padding:14px 20px; border-top:1px solid var(--line); vertical-align:top; text-align:left; }
+tr:first-child th, tr:first-child td { border-top:0; }
+.tbl-label tbody th { background:var(--bg-card); font-weight:700; width:150px; color:var(--dark); }
+.tbl-3col thead th {
+  background:var(--accent); color:var(--white); font-weight:700;
+  padding:12px 20px; font-size:14px; text-align:left;
+}
+.tbl-3col tbody tr { transition:background .15s; }
+.tbl-3col tbody tr:hover { background:var(--bg-photo); }
+td .em, th .em { font-weight:800; color:var(--accent); }
+@media (max-width:768px){
+  .tbl-label tbody th, .tbl-label tbody td { display:block; width:100%; }
+  .tbl-label tbody td { border-top:0; padding-top:8px; }
+  .tbl-3col thead { display:none; }
+  .tbl-3col tbody tr { display:block; border-top:1px solid var(--line); padding:8px 0; }
+  .tbl-3col tbody tr:first-child { border-top:0; }
+  .tbl-3col tbody td { display:block; border:0; padding:4px 20px; }
+  .tbl-3col tbody td::before {
+    content:attr(data-label); display:block;
+    font-size:11.5px; font-weight:700; letter-spacing:.1em; color:var(--accent);
+  }
+}
+
+/* ---------- profile ---------- */
+.profile-grid { display:grid; grid-template-columns:1fr 340px; gap:0; }
+.profile-photo { background:var(--bg-photo); border-left:1px solid var(--line); }
+.profile-photo img { width:100%; height:100%; object-fit:cover; }
+.intro-block { border-top:1px solid var(--line); }
+.intro-label { background:var(--bg-card); font-weight:700; padding:12px 20px; font-size:15px; }
+.intro-body { padding:20px; }
+.intro-body p { margin-bottom:14px; font-size:15.5px; }
+.intro-body p:last-child { margin-bottom:0; }
+@media (max-width:768px){
+  .profile-grid { grid-template-columns:1fr; }
+  .profile-photo { order:-1; border-left:0; border-bottom:1px solid var(--line); }
+  .profile-photo img { max-height:380px; object-position:top; }
+}
+
+/* ---------- glance cards (내용 | 사진, uniform row height) ---------- */
+.glance-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:28px; }
+.glance-card {
+  display:flex; height:156px; border-radius:var(--radius); overflow:hidden;
+  border:1px solid var(--line); box-shadow:var(--shadow);
+  transition:transform .25s, box-shadow .25s; background:var(--bg-card);
+}
+.glance-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-h); }
+.glance-text { flex:1 1 0; padding:16px 18px; display:flex; flex-direction:column; gap:6px; min-width:0; }
+.glance-num { font-size:11px; font-weight:800; letter-spacing:.12em; color:var(--accent); }
+.glance-title { font-size:16.5px; font-weight:800; color:var(--accent); letter-spacing:-.01em; }
+.glance-desc { font-size:12.8px; line-height:1.5; color:var(--dark); overflow:hidden; }
+.glance-img { flex:0 0 190px; background:var(--bg-photo); }
+.glance-img img { width:100%; height:100%; object-fit:cover; cursor:zoom-in; transition:transform .4s; }
+.glance-card:hover .glance-img img { transform:scale(1.05); }
+.glance-img.fit-contain img { object-fit:contain; }
+@media (max-width:920px){ .glance-grid { grid-template-columns:1fr; } }
+@media (max-width:560px){
+  .glance-card { flex-direction:column; height:auto; }
+  .glance-img { flex:none; height:170px; order:-1; }
+  .glance-desc { overflow:visible; font-size:13.5px; }
+}
+/* text-only glance cards (space page) */
+.glance-card.text-only { height:auto; min-height:150px; }
+.glance-card.text-only .glance-desc { overflow:visible; font-size:13.6px; }
+
+/* ---------- hashtags ---------- */
+.tags { display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 28px; }
+.tag {
+  background:var(--bg-card); color:var(--accent); font-weight:800; font-size:14px;
+  padding:8px 15px; border-radius:99px; transition:all .2s; cursor:default;
+}
+.tag:hover { background:var(--accent); color:#fff; transform:translateY(-2px); }
+
+/* ---------- accordion ---------- */
+.acc-tools { display:flex; justify-content:flex-end; margin-bottom:14px; }
+.acc-toggle-all {
+  border:1px solid var(--line); background:var(--white); cursor:pointer;
+  font:inherit; font-size:13px; font-weight:600; color:var(--gray);
+  padding:7px 15px; border-radius:99px; transition:all .2s;
+}
+.acc-toggle-all:hover { border-color:var(--accent); color:var(--accent); }
+details.acc { border:1px solid var(--line); border-radius:var(--radius); background:var(--white); box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; }
+details.acc summary {
+  list-style:none; cursor:pointer; display:flex; align-items:center; gap:12px;
+  padding:18px 20px; font-weight:800; font-size:16.5px; transition:background .2s;
+}
+details.acc summary::-webkit-details-marker { display:none; }
+details.acc summary:hover { background:var(--bg-photo); }
+details.acc summary .badge {
+  font-size:11.5px; font-weight:700; color:var(--accent);
+  background:var(--bg-card); padding:3px 10px; border-radius:99px;
+}
+details.acc summary .chev {
+  margin-left:auto; width:22px; height:22px; flex:none;
+  display:grid; place-items:center; color:var(--accent);
+  transition:transform .3s;
+}
+details.acc[open] summary .chev { transform:rotate(180deg); }
+details.acc .acc-body { padding:0 20px 20px; }
+details.acc .acc-body .tbl-card { margin-bottom:0; border-left:0; border-right:0; border-radius:12px; }
+ul.list { list-style:none; }
+ul.list li { padding:10px 0 10px 22px; position:relative; border-bottom:1px solid var(--line); font-size:15px; }
+ul.list li:last-child { border-bottom:0; }
+ul.list li::before { content:""; position:absolute; left:4px; top:19px; width:7px; height:7px; border-radius:50%; background:var(--accent); }
+
+/* ---------- hover image peek ---------- */
+.peek { border-bottom:1.5px dashed var(--accent); cursor:help; }
+.peek::after { content:" 📷"; font-size:.8em; }
+#peek-float {
+  position:fixed; z-index:300; pointer-events:none; display:none;
+  border-radius:12px; overflow:hidden; box-shadow:var(--shadow-h); border:3px solid var(--white);
+}
+#peek-float img { width:280px; height:190px; object-fit:cover; }
+@media (hover:none){ .peek::after { content:" 📷"; } }
+
+/* ---------- lightbox ---------- */
+#lightbox {
+  position:fixed; inset:0; z-index:400; display:none;
+  background:rgba(20,17,12,.88); cursor:zoom-out;
+  align-items:center; justify-content:center; padding:32px;
+}
+#lightbox.open { display:flex; animation:fadeIn .25s ease; }
+#lightbox img { max-width:min(1000px,94vw); max-height:88vh; object-fit:contain; border-radius:10px; }
+
+/* ---------- reveal ---------- */
+.reveal { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){
+  .reveal { opacity:1; transform:none; transition:none; }
+  html { scroll-behavior:auto; }
+}
+
+/* ---------- footer ---------- */
+footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--line); }
+.foot-inner { max-width:1080px; margin:0 auto; padding:48px 24px 40px; }
+.foot-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+.foot-col h3 { font-size:15px; font-weight:800; color:var(--accent); margin-bottom:14px; letter-spacing:.02em; }
+.foot-col dl { display:grid; grid-template-columns:88px 1fr; row-gap:8px; font-size:14.5px; }
+.foot-col dt { font-weight:700; color:var(--gray); }
+.foot-col dd a { color:var(--dark); text-decoration:none; border-bottom:1px solid transparent; }
+.foot-col dd a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+.foot-note { margin-top:34px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--gray); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+@media (max-width:640px){ .foot-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">장서영<span class="x">×</span><span class="quote-brand">'           '</span></div>
+    <div class="nav-tabs" role="tablist">
+      <button class="nav-tab active" data-view="person" role="tab">인물 소개</button>
+      <button class="nav-tab" data-view="space" role="tab">공간 소개</button>
+    </div>
+    <a class="nav-cta" href="mailto:singlemarks@gmail.com">✉ 섭외 문의</a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     PART A. 인물 페이지 — 장서영
+═════════════════════════════════════════════ -->
+<div class="page active" id="view-person">
+
+  <div class="subnav">
+    <div class="subnav-inner">
+      <button class="chip" data-target="p-profile">프로필</button>
+      <button class="chip" data-target="p-glance">한눈에 보기</button>
+      <button class="chip" data-target="p-bucket">버킷리스트</button>
+      <button class="chip" data-target="p-points">섭외 포인트</button>
+      <button class="chip" data-target="p-history">상세 이력</button>
+      <button class="chip" data-target="p-contact">문의</button>
+    </div>
+  </div>
+
+  <!-- A-1 헤더 -->
+  <header class="hero wrap">
+    <span class="eyebrow">인물 소개서 | PROFILE</span>
+    <h1>장서영 <small>JANG Seo Yeong</small></h1>
+    <span class="tagline">버킷리스트에 미친 청년, CULTURE DESIGNER</span>
+  </header>
+
+  <!-- A-2 프로필 표 -->
+  <section id="p-profile" class="wrap reveal">
+    <div class="sec-label">PROFILE</div>
+    <h2 class="sec-title">프로필</h2>
+    <div class="tbl-card">
+      <div class="profile-grid">
+        <table class="tbl-label">
+          <tbody>
+            <tr><th>출생</th><td>1994. 01. 21 (만 32세) · 남성</td></tr>
+            <tr><th>거주지</th><td>서울특별시 관악구 신림동</td></tr>
+            <tr><th>직업</th><td><strong class="em">컬처 디자이너 (CULTURE DESIGNER)</strong><br>· 싱어송라이터<br>· 13년차 나다움 브랜드 <span class="quote-brand">'     '</span>(작은따옴표) 운영 대표 (Since 2014)</td></tr>
+            <tr><th>연락처</th><td><a href="tel:01033191160">010-3319-1160</a><br><a href="mailto:singlemarks@gmail.com">singlemarks@gmail.com</a></td></tr>
+            <tr><th>Instagram</th><td><a href="https://www.instagram.com/seoyeong37_singlemarks/" target="_blank" rel="noopener">@seoyeong37_singlemarks</a></td></tr>
+          </tbody>
+        </table>
+        <div class="profile-photo"><img src="website_assets/photo.jpg" alt="장서영 프로필 — 공항 경례 필름사진" class="zoomable"></div>
+      </div>
+      <div class="intro-block">
+        <div class="intro-label">소개</div>
+        <div class="intro-body">
+          <p><strong>저의 꿈은 언젠가 마주할 생의 여행 끝에서 사랑하는 사람들과 함께 "멋진 여행이었다!"라고 이야기하는 것입니다.</strong></p>
+          <p>제가 생각하기에 누가 어디서 어떤 삶을 살아가든, 한 사람이 살아갈 수 있는 가장 최선의 삶은 '자기답게 살아가는 삶', '나답게 살아가는 삶'이라고 생각합니다. 조금 더 쉽게 표현하자면, 언젠가 마주할 생의 끝에서 나의 지난 삶을 돌아보며 후회가 가득한 삶이 아니라 "좋은 여행이었다!"라고 이야기할 수 있는 삶이죠. 그래서 저희는 우리가 나답게 살아가며, 우리가 사랑하는 사람들, 더 나아가 모두가 나답게 살아갈 수 있는 세상과 문화를 만드는 일을 하고 있습니다.</p>
+          <p>저희는 모두가 나답게 살아갈 수 있는 세상을 위해 '살롱 문화'를 담은 Cafe &amp; Dining Bar 공간을 운영하고 있고, 내가 누구인지, 내가 진정 원하는 삶이 무엇인지 질문하고 마주할 수 있는 제품 &amp; 교육 &amp; 콘텐츠 제작 &amp; 커뮤니티를 운영하고 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A-3 한눈에 보기 -->
+  <section id="p-glance" class="wrap reveal">
+    <div class="sec-label">AT A GLANCE</div>
+    <h2 class="sec-title">이 사람, 한눈에 보기</h2>
+    <p class="sec-sub">사진에 마우스를 올리거나 클릭하면 크게 볼 수 있습니다.</p>
+    <div class="glance-grid">
+      <article class="glance-card">
+        <div class="glance-text">
+          <span class="glance-num">01</span>
+          <span class="glance-title">지금, 100개의 꿈</span>
+          <span class="glance-desc">가게 벽에 적은 100개의 버킷리스트를 팀원들과 1년 안에 전부 이루는 '100 Dreams on the wall' 프로젝트 리드 중 — 3일에 하나씩.</span>
+        </div>
+        <div class="glance-img"><img src="website_assets/img_wall.jpg" alt="'Our 1 year Bucket List!' 벽면 칠판" class="zoomable"></div>
+      </article>
+      <article class="glance-card">
+        <div class="glance-text">
+          <span class="glance-num">02</span>
+          <span class="glance-title">12년의 버킷리스트</span>
+          <span class="glance-desc">12년째 버킷리스트를 적고, 이뤄온 사람. 2023년부터 4년째 버킷리스트 커뮤니티 '100*100ket(백백킷)' 운영.</span>
+        </div>
+        <div class="glance-img"><img src="website_assets/img_bbk2.jpg" alt="100*100ket 커뮤니티 소개 이미지" class="zoomable"></div>
+      </article>
+      <article class="glance-card">
+        <div class="glance-text">
+          <span class="glance-num">03</span>
+          <span class="glance-title">커뮤니티 리더</span>
+          <span class="glance-desc">넷플연가 모임장(2025, '우리가 꿈꾸는 세계는 현실이 된다') · 동행클럽 '버킷리스트 클럽' 클럽장(2026~).</span>
+        </div>
+        <div class="glance-img"><img src="website_assets/img_leader.jpg" alt="넷플연가 모임 페이지 스크린샷" class="zoomable"></div>
+      </article>
+      <article class="glance-card">
+        <div class="glance-text">
+          <span class="glance-num">04</span>
+          <span class="glance-title">2026 MBC 출연</span>
+          <span class="glance-desc">&lt;구해줘! 홈즈&gt; 355회 '연애의 집 참견' 출연. MBC·SBS·TV조선·OBS 등 방송 출연 다수.</span>
+        </div>
+        <div class="glance-img"><img src="website_assets/img_mbc.jpg" alt="구해줘홈즈 방송 컷 — '나답게 살 수 있도록 세상을 디자인하는 것'" class="zoomable"></div>
+      </article>
+      <article class="glance-card">
+        <div class="glance-text">
+          <span class="glance-num">05</span>
+          <span class="glance-title">13년차 대표</span>
+          <span class="glance-desc">2014년부터 '나다움'을 디자인해 온 문화 브랜드 <span class="quote-brand">'     '</span>(작은따옴표) 창업·운영. 살롱 카페 &amp; 다이닝 바, 대안학교, 커뮤니티까지.</span>
+        </div>
+        <div class="glance-img"><img src="website_assets/img_group.jpg" alt="살롱 단체사진 4컷 그리드" class="zoomable"></div>
+      </article>
+      <article class="glance-card">
+        <div class="glance-text">
+          <span class="glance-num">06</span>
+          <span class="glance-title">TED 강연 3회</span>
+          <span class="glance-desc">TED KOREA 신촌(2016) · Koreatechu(2018) · UNIST(2019) 연사. 2015 서울 혁신상 대상 수상.</span>
+        </div>
+        <div class="glance-img"><img src="website_assets/img_ted.jpg" alt="TEDx Sinchon 무대 — '나 다운 삶'" class="zoomable"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- A-4 섹션 1 -->
+  <section id="p-bucket" class="wrap reveal">
+    <div class="sec-label">SECTION 1</div>
+    <h2 class="sec-title">버킷리스트를 삶으로 증명하는 사람</h2>
+    <p class="lead">12년째 버킷리스트를 적고, 이뤄왔습니다. 버킷리스트는 '언젠가의 소망 목록'이 아니라 <strong>'지금 당장의 실행 계획'</strong>. 카메라가 따라가기만 해도 서사가 완성되는 인물입니다.</p>
+
+    <div class="tbl-card">
+      <table class="tbl-label">
+        <caption>시그니처 프로젝트 : <span class="peek" data-img="website_assets/img_wall.jpg">100 Dreams on the wall</span></caption>
+        <tbody>
+          <tr><th>프로젝트</th><td><strong class="em">100 Dreams on the wall</strong> — 가게 벽에 적은 100개의 꿈</td></tr>
+          <tr><th>미션</th><td>1년 안에 100개 완주. 평균 3일에 1개.</td></tr>
+          <tr><th>방식</th><td>팀 전원이 함께 도전, 장서영 리드</td></tr>
+          <tr><th>아카이브</th><td>Instagram 실시간 기록 · 방문객 QR 응원 참여</td></tr>
+          <tr><th>홈페이지</th><td><a class="em" href="https://singlemarksbucket.com/" target="_blank" rel="noopener">singlemarksbucket.com</a> — 팀 소개 · 100개 리스트 · 달성 현황 (외부 링크)</td></tr>
+          <tr><th>한 줄 정의</th><td>위기에서 시작해, 지금 이 순간이 마지막인 것처럼 꿈을 이루는 프로젝트</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-card">
+      <table class="tbl-3col">
+        <caption>버킷리스트 커뮤니티 <span class="cap-note">함께 이루는 판을 만드는 사람</span></caption>
+        <thead><tr><th>기간</th><th>커뮤니티</th><th>역할 · 규모</th></tr></thead>
+        <tbody>
+          <tr><td data-label="기간">2023 ~ 현재</td><td data-label="커뮤니티"><span class="peek" data-img="website_assets/img_bbk2.jpg">100*100ket (백백킷)</span> — 함께 버킷리스트를 이루는 커뮤니티</td><td data-label="역할 · 규모">운영 · 4년째</td></tr>
+          <tr><td data-label="기간">2026.07 ~</td><td data-label="커뮤니티">동행클럽 '버킷리스트 클럽' — 커뮤니티형 스터디</td><td data-label="역할 · 규모">클럽장 · 24명 완주 리드</td></tr>
+          <tr><td data-label="기간">2025.06</td><td data-label="커뮤니티"><span class="peek" data-img="website_assets/img_leader.jpg">넷플연가 '우리가 꿈꾸는 세계는 현실이 된다'</span></td><td data-label="역할 · 규모">모임장</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec-label">KEYWORDS</div>
+    <div class="tags">
+      <span class="tag peek" data-img="website_assets/img_wall.jpg">#버킷리스트</span>
+      <span class="tag peek" data-img="website_assets/img_wall.jpg">#100DreamsOnTheWall</span>
+      <span class="tag peek" data-img="website_assets/img_bbk2.jpg">#백백킷</span>
+      <span class="tag">#버킷리스트클럽</span>
+      <span class="tag">#나다움</span>
+      <span class="tag">#13년차자영업자</span>
+      <span class="tag">#컬처디자이너</span>
+      <span class="tag">#싱어송라이터</span>
+      <span class="tag">#12년차솔로</span>
+      <span class="tag">#옥탑방라이프</span>
+    </div>
+  </section>
+
+  <!-- A-5 섹션 2 -->
+  <section id="p-points" class="wrap reveal">
+    <div class="sec-label">SECTION 2</div>
+    <h2 class="sec-title">섭외 포인트 5</h2>
+    <div class="tbl-card">
+      <table class="tbl-3col">
+        <thead><tr><th>포인트</th><th>내용</th><th>근거</th></tr></thead>
+        <tbody>
+          <tr><td data-label="포인트"><strong class="em">소재 = 인물</strong></td><td data-label="내용">'버킷리스트' 하면 바로 섭외 가능한 실물 사례</td><td data-label="근거">개인 12년 실천 + 커뮤니티 4년 운영</td></tr>
+          <tr><td data-label="포인트"><strong class="em">살아있는 서사</strong></td><td data-label="내용">위기 → 질문 → 결단 → 실행, 현재진행형 드라마</td><td data-label="근거">13년차 자영업 · 억대의 빚 · 100개의 꿈</td></tr>
+          <tr><td data-label="포인트"><strong class="em">방송 검증</strong></td><td data-label="내용">카메라·인터뷰에 익숙한 검증된 출연자</td><td data-label="근거"><span class="peek" data-img="website_assets/img_mbc.jpg">2026 MBC 구해줘홈즈</span> 외 MBC·SBS·TV조선·OBS 다수</td></tr>
+          <tr><td data-label="포인트"><strong class="em">전달력</strong></td><td data-label="내용">말과 음악으로 푸는 스토리텔러</td><td data-label="근거"><span class="peek" data-img="website_assets/img_ted.jpg">TED 3회</span> · 전국 강연 수십 회 · 싱어송라이터</td></tr>
+          <tr><td data-label="포인트"><strong class="em">입체 캐릭터</strong></td><td data-label="내용">예능적 캐릭터 + 다큐적 깊이 동시 보유</td><td data-label="근거">13년차 대표 / 12년차 솔로 / 옥탑방 자취</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-card">
+      <table class="tbl-label">
+        <caption>추천 활용 포맷</caption>
+        <tbody>
+          <tr><th>밀착 다큐 / 리얼리티</th><td>'3일에 하나씩, 100개의 꿈' — 버킷리스트 달성 과정을 따라가는 관찰형 콘텐츠. 성공과 실패가 모두 서사가 되는 리얼타임 프로젝트.</td></tr>
+          <tr><th>토크 · 인터뷰</th><td>'13년차 자영업자의 위기와 꿈', '나답게 산다는 것' — TED 3회 연사의 검증된 스토리텔링.</td></tr>
+          <tr><th>연애 · 라이프 예능</th><td>12년차 솔로 · 옥탑방 자취 · 꿈에 미친 남자 — 연애 리얼리티, 하우스 예능과의 자연스러운 접점.</td></tr>
+          <tr><th>음악 콘텐츠</th><td>싱어송라이터로서 자작곡 퍼포먼스, 라이브 공연 콘텐츠 소화 가능.</td></tr>
+          <tr><th>캠페인 · 브랜드</th><td>'당신의 벽에는 어떤 꿈이 적혀 있나요?' — 버킷리스트 참여형 캠페인. 신년·연말 시즌 기획과의 궁합.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- A-6 섹션 3 -->
+  <section id="p-history" class="wrap reveal">
+    <div class="sec-label">SECTION 3</div>
+    <h2 class="sec-title">상세 이력</h2>
+    <p class="sec-sub">항목을 눌러 펼쳐 보세요. 모든 이력이 기재되어 있습니다.</p>
+    <div class="acc-tools"><button class="acc-toggle-all" data-group="p-acc">모두 펼치기</button></div>
+
+    <details class="acc" data-group="p-acc" open>
+      <summary>방송 · 언론 출연 <span class="badge">최신순</span><span class="chev">▾</span></summary>
+      <div class="acc-body">
+        <div class="tbl-card">
+          <table class="tbl-3col">
+            <thead><tr><th>연도</th><th>매체 / 프로그램</th><th>비고</th></tr></thead>
+            <tbody>
+              <tr><td data-label="연도">2026.07.02</td><td data-label="매체 / 프로그램"><span class="peek" data-img="website_assets/img_mbc.jpg">MBC &lt;구해줘! 홈즈&gt; 355회 '연애의 집 참견'</span></td><td data-label="비고">출연 (관악산 뷰 옥탑방)</td></tr>
+              <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">MBC 다큐 &lt;문화 창업, 세상을 바꾸다&gt;</td><td data-label="비고">출연</td></tr>
+              <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">TV조선 다큐 &lt;신림이 바뀐다&gt; / &lt;그들이 사는 세상&gt;</td><td data-label="비고">출연</td></tr>
+              <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">SBS 뉴스 &lt;아이디어가 세상을 바꾼다&gt;</td><td data-label="비고">'ARTRASH' 출연</td></tr>
+              <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">현대 HCN 뉴스</td><td data-label="비고">출연</td></tr>
+              <tr><td data-label="연도">2015</td><td data-label="매체 / 프로그램">MBC 다큐 &lt;살맛 나는 세상&gt;</td><td data-label="비고">신림역 게릴라 축제</td></tr>
+              <tr><td data-label="연도">2015</td><td data-label="매체 / 프로그램">OBS 다큐 &lt;이것이 인생&gt;</td><td data-label="비고">출연</td></tr>
+              <tr><td data-label="연도">2015</td><td data-label="매체 / 프로그램">관악 TV &lt;세상과 연애하기&gt; 외</td><td data-label="비고">출연</td></tr>
+              <tr><td data-label="연도">—</td><td data-label="매체 / 프로그램">그 외 방송 · 신문 · 잡지 · 인터뷰 다수</td><td data-label="비고"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+
+    <details class="acc" data-group="p-acc">
+      <summary>주요 이력 <span class="badge">2014 ~ 현재</span><span class="chev">▾</span></summary>
+      <div class="acc-body">
+        <ul class="list">
+          <li>2014 ~ 현재 / 문화 브랜드 <span class="quote-brand">'     '</span>(작은따옴표) 창업 · 운영 대표 — 13년차</li>
+          <li>2023 ~ 현재 / 버킷리스트 커뮤니티 <span class="peek" data-img="website_assets/img_bbk2.jpg">'100*100ket(백백킷)'</span> 운영 — 4년째</li>
+          <li>2026. 07 ~ / 동행클럽 '버킷리스트 클럽' 클럽장</li>
+          <li>2025. 06 / <span class="peek" data-img="website_assets/img_leader.jpg">넷플연가 모임장</span> — '우리가 꿈꾸는 세계는 현실이 된다'</li>
+          <li>2015 ~ / 전국 친환경 예술 프로젝트 'ARTRASH' 대표 (영국 런던 Kingston Korean Festival 진출)</li>
+          <li>2015 ~ / <span class="quote-brand">'     '</span> 학당(대안학교) 운영</li>
+          <li>2017 / 박원순 서울시장 청년 간담회 '비정상회담' 총감독</li>
+          <li>2018 / 서울 문화예술연대 네트워크 임원</li>
+          <li>2019 / 서울시 청년자치정부 위원 · 관악구 청년정책위원회 등 지역 위원 활동 다수</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc" data-group="p-acc">
+      <summary>수상 <span class="badge">4건</span><span class="chev">▾</span></summary>
+      <div class="acc-body">
+        <ul class="list">
+          <li>2015 / '서울 혁신상' 대상</li>
+          <li>2015 / 미래창조과학부 장관 우수 창업팀 메달</li>
+          <li>2015 / 창업 오디션 '슈퍼끼어로' 2위</li>
+          <li>2019 / 관악구청 표창장</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc" data-group="p-acc">
+      <summary>강연 · 연구 참여 <span class="badge">요약</span><span class="chev">▾</span></summary>
+      <div class="acc-body">
+        <ul class="list">
+          <li><span class="peek" data-img="website_assets/img_ted.jpg">TED KOREA 강연 3회</span> — 2016 신촌 / 2018 Koreatechu / 2019 UNIST</li>
+          <li>2016 프린지 페스티벌 · 서울문화재단 &lt;서울을 바꾸는 예술&gt; 연사</li>
+          <li>연세대 문화기획학과, 하자센터, 제주문화예술재단, 서울시 인재개발원 등 강연 수십 회</li>
+          <li>2018 / 한국연구재단 등재지(인문사회) '한국형 예술·산업 생태계 모형 제안' 사례·인터뷰 참여</li>
+          <li>2017 / 서울문화재단 '예술의 사회적 활동 실태' 연구 포럼 전문가 참여</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- A 문의 -->
+  <section id="p-contact" class="wrap reveal">
+    <div class="sec-label">CONTACT</div>
+    <h2 class="sec-title">문의</h2>
+    <div class="tbl-card">
+      <table class="tbl-label">
+        <tbody>
+          <tr><th>연락처</th><td><a href="tel:01033191160">010-3319-1160</a></td></tr>
+          <tr><th>이메일</th><td><a href="mailto:singlemarks@gmail.com">singlemarks@gmail.com</a></td></tr>
+          <tr><th>Instagram</th><td><a href="https://www.instagram.com/seoyeong37_singlemarks/" target="_blank" rel="noopener">@seoyeong37_singlemarks</a></td></tr>
+          <tr><th>홈페이지</th><td><a href="https://singlemarksbucket.com/" target="_blank" rel="noopener">singlemarksbucket.com</a> — 팀 소개 &amp; 버킷리스트</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<!-- ════════════════════════════════════════════
+     PART B. 공간 페이지 — '           ' (작은따옴표)
+═════════════════════════════════════════════ -->
+<div class="page" id="view-space">
+
+  <div class="subnav">
+    <div class="subnav-inner">
+      <button class="chip" data-target="s-info">기본 정보</button>
+      <button class="chip" data-target="s-glance">한눈에 보기</button>
+      <button class="chip" data-target="s-experience">공간 경험</button>
+      <button class="chip" data-target="s-brand">브랜드</button>
+      <button class="chip" data-target="s-shoot">촬영 협조</button>
+      <button class="chip" data-target="s-contact">문의</button>
+    </div>
+  </div>
+
+  <!-- B-1 헤더 -->
+  <header class="hero wrap">
+    <span class="eyebrow">공간 소개서 | SPACE PROFILE</span>
+    <h1><span class="quote-brand">'           '</span> <small>작은따옴표</small></h1>
+    <span class="tagline">유럽 살롱 무드에 버킷리스트가 어우러진, 13년차 나다움 공간</span>
+    <div class="hero-img"><img src="website_assets/img_salon.png" alt="작은따옴표 살롱 내부 — Be myself, Be yourself, Be ourselves" class="zoomable"></div>
+  </header>
+
+  <!-- B-2 기본 정보 -->
+  <section id="s-info" class="wrap reveal">
+    <div class="sec-label">INFORMATION</div>
+    <h2 class="sec-title">기본 정보</h2>
+    <div class="tbl-card">
+      <table class="tbl-label">
+        <tbody>
+          <tr><th>공간</th><td><span class="quote-brand">'           '</span>(작은따옴표) 도림천점 — Salon Cafe &amp; Dining Bar</td></tr>
+          <tr><th>컨셉</th><td><strong class="em">유럽 살롱문화 × 버킷리스트</strong><br>앤티크 샹들리에와 빈티지 가구, 그리고 <span class="peek" data-img="website_assets/img_wall.jpg">벽에 적힌 100개의 꿈</span></td></tr>
+          <tr><th>슬로건</th><td><strong class="em">Be myself, Be yourself, Be ourselves.</strong> — Since 2014, 13년차</td></tr>
+          <tr><th>주소</th><td>서울특별시 관악구 관천로 36-1 2층 (신림동 · 도림천 인접)</td></tr>
+          <tr><th>연락처</th><td><a href="tel:050713526010">0507-1352-6010</a> (공간) / <a href="tel:01033191160">010-3319-1160</a> (장서영 대표)</td></tr>
+          <tr><th>홈페이지</th><td><a class="em" href="https://singlemarksbucket.com/" target="_blank" rel="noopener">singlemarksbucket.com</a> — 팀 소개 &amp; 100개 버킷리스트</td></tr>
+          <tr><th>운영사</th><td>Culture Design Corporation <span class="quote-brand">'           '</span> — 대표 장서영 (컬처 디자이너)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- B-3 한눈에 보기 -->
+  <section id="s-glance" class="wrap reveal">
+    <div class="sec-label">AT A GLANCE</div>
+    <h2 class="sec-title">이 공간, 한눈에 보기</h2>
+    <p class="sec-sub">밑줄 친 항목에 마우스를 올리면 참고 이미지가 나타납니다.</p>
+    <div class="glance-grid">
+      <article class="glance-card text-only">
+        <div class="glance-text">
+          <span class="glance-num">01</span>
+          <span class="glance-title">유럽 살롱 무드</span>
+          <span class="glance-desc">앤티크 램프와 샹들리에, 빈티지 가구가 만드는 <span class="peek" data-img="website_assets/img_salon.png">유럽 살롱 감성</span>. 낮의 카페와 밤의 다이닝 바, 표정이 완전히 다른 공간.</span>
+        </div>
+      </article>
+      <article class="glance-card text-only">
+        <div class="glance-text">
+          <span class="glance-num">02</span>
+          <span class="glance-title">100개의 꿈 벽</span>
+          <span class="glance-desc">가게 벽에 적힌 <span class="peek" data-img="website_assets/img_wall.jpg">100개의 버킷리스트</span>. 손님이 함께 읽고, 응원하고, 동참하는 참여형 스토리 월.</span>
+        </div>
+      </article>
+      <article class="glance-card text-only">
+        <div class="glance-text">
+          <span class="glance-num">03</span>
+          <span class="glance-title">살롱 라이브</span>
+          <span class="glance-desc">공간 한가운데에서 실제 뮤지션의 공연이 열리는, 국내에서 드문 살롱형 카페 &amp; 다이닝 바.</span>
+        </div>
+      </article>
+      <article class="glance-card text-only">
+        <div class="glance-text">
+          <span class="glance-num">04</span>
+          <span class="glance-title">13년차 브랜드</span>
+          <span class="glance-desc">2014년부터 '나다움'을 디자인해 온 <span class="peek" data-img="website_assets/img_group.jpg">브랜드</span>. 카페를 넘어 대안학교·축제·커뮤니티까지 확장된 세계관.</span>
+        </div>
+      </article>
+      <article class="glance-card text-only">
+        <div class="glance-text">
+          <span class="glance-num">05</span>
+          <span class="glance-title">2026 SBS 소개</span>
+          <span class="glance-desc">&lt;생방송 투데이&gt; 4035회 '반전 매력의 신림동' 편 공간 소개. 경희대 V.O.U. 휴먼다큐 촬영지.</span>
+        </div>
+      </article>
+      <article class="glance-card text-only">
+        <div class="glance-text">
+          <span class="glance-num">06</span>
+          <span class="glance-title">촬영 · 데이트</span>
+          <span class="glance-desc">공간 촬영 적극 협조. 대화가 되살아나는 이색 데이트 코스로 커플·소개팅 포맷과 높은 궁합.</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- B-4 섹션 1 -->
+  <section id="s-experience" class="wrap reveal">
+    <div class="sec-label">SECTION 1</div>
+    <h2 class="sec-title">유럽 살롱에서, 버킷리스트를 만나다</h2>
+    <p class="lead">작은따옴표는 '예쁜 카페'가 아니라 <strong>'이야기가 있는 공간'</strong>입니다. 유럽 살롱풍의 앤티크한 무드 안에서 커피와 술, 음악과 대화가 흐르고 — 그 벽에는 100개의 버킷리스트가 적혀 있습니다.</p>
+
+    <div class="tbl-card">
+      <table class="tbl-label">
+        <caption>공간 경험</caption>
+        <tbody>
+          <tr><th>낮 — CAFE</th><td>도림천 뷰와 앤티크 조명 아래, 커피와 대화. 감성 사진 명소.</td></tr>
+          <tr><th>저녁 — DINING BAR</th><td>다이닝과 술, 살롱의 밤. 조도가 낮아지며 공간의 표정이 바뀝니다.</td></tr>
+          <tr><th>밤 — SALON LIVE</th><td>공간 한가운데에서 열리는 라이브 공연. 노래와 이야기가 있는 살롱 문화.</td></tr>
+          <tr><th>언제나 — 100개의 꿈</th><td><span class="peek" data-img="website_assets/img_wall.jpg">벽에 적힌 버킷리스트</span>를 읽고, QR로 응원하고, 나의 꿈을 이야기하게 되는 공간.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-card">
+      <table class="tbl-3col">
+        <caption>이색 데이트 포인트</caption>
+        <thead><tr><th>포인트</th><th>내용</th><th>왜 특별한가</th></tr></thead>
+        <tbody>
+          <tr><td data-label="포인트"><strong class="em">앤티크 살롱</strong></td><td data-label="내용"><span class="peek" data-img="website_assets/img_salon.png">유럽 살롱 감성의 인테리어</span> · 도림천 뷰</td><td data-label="왜 특별한가">서울에서 보기 드문 무드</td></tr>
+          <tr><td data-label="포인트"><strong class="em">질문 콘텐츠</strong></td><td data-label="내용">'내가 진짜 원하는 삶은?' 질문 카드 · 대화 장치</td><td data-label="왜 특별한가">서로를 새롭게 알게 되는 데이트</td></tr>
+          <tr><td data-label="포인트"><strong class="em">꿈의 벽</strong></td><td data-label="내용"><span class="peek" data-img="website_assets/img_wall.jpg">100개의 버킷리스트 스토리 월</span></td><td data-label="왜 특별한가">함께 읽고 우리의 꿈을 적게 되는 경험</td></tr>
+          <tr><td data-label="포인트"><strong class="em">살롱 라이브</strong></td><td data-label="내용">뮤지션 공연 · 대표(싱어송라이터) 무대</td><td data-label="왜 특별한가">공연장 아닌 살롱에서 즐기는 음악</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- B-5 섹션 2 -->
+  <section id="s-brand" class="wrap reveal">
+    <div class="sec-label">SECTION 2</div>
+    <h2 class="sec-title">13년차 '나다움' 브랜드</h2>
+    <p class="lead">이름조차 비어 있는 작은따옴표(<span class="quote-brand">'  '</span>) — 따옴표 안을 채우는 것은 이곳을 찾는 각자의 이름과 이야기입니다. 2014년부터 13년째, <strong>'모두가 나답게 살아갈 수 있는 세상과 문화'</strong>를 디자인해 왔습니다.</p>
+
+    <div class="tbl-card">
+      <table class="tbl-3col">
+        <caption>브랜드 트랙레코드</caption>
+        <thead><tr><th>연혁</th><th>활동</th><th>비고</th></tr></thead>
+        <tbody>
+          <tr><td data-label="연혁">2014 ~</td><td data-label="활동">Culture Design Corporation <span class="quote-brand">'           '</span> 설립 · 운영</td><td data-label="비고">13년차</td></tr>
+          <tr><td data-label="연혁">2015 ~</td><td data-label="활동"><span class="quote-brand">'           '</span> 학당 (대안학교) 운영</td><td data-label="비고">나다움 교육</td></tr>
+          <tr><td data-label="연혁">2015 ~</td><td data-label="활동">전국 친환경 예술 축제 'ARTRASH'</td><td data-label="비고">영국 런던 페스티벌 진출</td></tr>
+          <tr><td data-label="연혁">2015</td><td data-label="활동">서울 혁신상 대상 · 미래부 장관 메달</td><td data-label="비고">수상</td></tr>
+          <tr><td data-label="연혁">2015~2022</td><td data-label="활동">서울시 · 관악문화재단 · 사회적기업진흥원 등 공공 협업</td><td data-label="비고">20건 이상</td></tr>
+          <tr><td data-label="연혁">2023 ~</td><td data-label="활동">버킷리스트 커뮤니티 <span class="peek" data-img="website_assets/img_bbk2.jpg">'100*100ket(백백킷)'</span> 운영</td><td data-label="비고">4년째</td></tr>
+          <tr><td data-label="연혁">2026 ~</td><td data-label="활동"><span class="peek" data-img="website_assets/img_wall.jpg">'100 Dreams on the wall'</span> — 벽에 적은 100개의 꿈</td><td data-label="비고">진행 중</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-card">
+      <table class="tbl-label">
+        <caption>시그니처 : <span class="peek" data-img="website_assets/img_wall.jpg">100 Dreams on the wall</span></caption>
+        <tbody>
+          <tr><th>무엇</th><td>가게 벽에 적은 100개의 버킷리스트</td></tr>
+          <tr><th>미션</th><td>팀 전원이 함께, 1년 안에 100개 완주 — 3일에 1개</td></tr>
+          <tr><th>참여</th><td>손님이 벽을 읽고, QR로 응원하고, 함께하는 오픈형 프로젝트</td></tr>
+          <tr><th>확인</th><td><a class="em" href="https://singlemarksbucket.com/" target="_blank" rel="noopener">singlemarksbucket.com</a> — 전체 리스트 · 달성 현황 공개</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- B-6 섹션 3 -->
+  <section id="s-shoot" class="wrap reveal">
+    <div class="sec-label">SECTION 3</div>
+    <h2 class="sec-title">공간 촬영 협조</h2>
+    <div class="tbl-card">
+      <table class="tbl-label">
+        <tbody>
+          <tr><th>협조 범위</th><td>공간 내부 · 외부 전경 촬영<br>살롱 라이브 공연 실황 · 커뮤니티 프로그램<br>대표 인터뷰 · 출연 (TED 3회 연사, MBC·SBS 등 출연 다수)</td></tr>
+          <tr><th>추천 포맷</th><td>이색 데이트 코스 · 골목/동네 상권 · 공간 다큐 · 청년 자영업 · 라이브 음악</td></tr>
+          <tr><th>협의</th><td><a href="tel:050713526010">0507-1352-6010</a> / <a href="mailto:singlemarks@gmail.com">singlemarks@gmail.com</a> — 사전 협의로 일정 · 동선 조율</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-card">
+      <table class="tbl-3col">
+        <caption>미디어 소개 이력</caption>
+        <thead><tr><th>연도</th><th>매체 / 프로그램</th><th>비고</th></tr></thead>
+        <tbody>
+          <tr><td data-label="연도">2026.06.23</td><td data-label="매체 / 프로그램">SBS &lt;생방송 투데이&gt; 4035회 '반전 매력의 신림동'</td><td data-label="비고">공간 소개</td></tr>
+          <tr><td data-label="연도">2026</td><td data-label="매체 / 프로그램">경희대 방송국 V.O.U. 휴먼다큐 [나다움을 향해서]</td><td data-label="비고">공간 · 커뮤니티 촬영</td></tr>
+          <tr><td data-label="연도">2017</td><td data-label="매체 / 프로그램">국민방송 KTV &lt;보물썸&gt;</td><td data-label="비고">ARTRASH 소개</td></tr>
+          <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">TV조선 다큐 &lt;신림이 바뀐다&gt;</td><td data-label="비고">공간 · 활동 소개</td></tr>
+          <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">SBS 뉴스 &lt;아이디어가 세상을 바꾼다&gt;</td><td data-label="비고">ARTRASH 소개</td></tr>
+          <tr><td data-label="연도">2015</td><td data-label="매체 / 프로그램">MBC &lt;살맛 나는 세상&gt; · OBS &lt;이것이 인생&gt; 외</td><td data-label="비고">공간 · 프로젝트 소개</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- B 문의 -->
+  <section id="s-contact" class="wrap reveal">
+    <div class="sec-label">CONTACT</div>
+    <h2 class="sec-title">문의</h2>
+    <div class="tbl-card">
+      <table class="tbl-label">
+        <tbody>
+          <tr><th>담당</th><td>장서영 대표 (컬처 디자이너 · 버킷리스트에 미친 청년)</td></tr>
+          <tr><th>전화</th><td><a href="tel:050713526010">0507-1352-6010</a> (공간) / <a href="tel:01033191160">010-3319-1160</a> (대표)</td></tr>
+          <tr><th>이메일</th><td><a href="mailto:singlemarks@gmail.com">singlemarks@gmail.com</a></td></tr>
+          <tr><th>홈페이지</th><td><a href="https://singlemarksbucket.com/" target="_blank" rel="noopener">singlemarksbucket.com</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h3>인물 문의 — 장서영</h3>
+        <dl>
+          <dt>연락처</dt><dd><a href="tel:01033191160">010-3319-1160</a></dd>
+          <dt>이메일</dt><dd><a href="mailto:singlemarks@gmail.com">singlemarks@gmail.com</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/seoyeong37_singlemarks/" target="_blank" rel="noopener">@seoyeong37_singlemarks</a></dd>
+          <dt>홈페이지</dt><dd><a href="https://singlemarksbucket.com/" target="_blank" rel="noopener">singlemarksbucket.com</a> — 팀 소개 &amp; 버킷리스트</dd>
+        </dl>
+      </div>
+      <div class="foot-col">
+        <h3>공간 문의 — <span class="quote-brand">'           '</span> (작은따옴표)</h3>
+        <dl>
+          <dt>담당</dt><dd>장서영 대표 (컬처 디자이너 · 버킷리스트에 미친 청년)</dd>
+          <dt>전화</dt><dd><a href="tel:050713526010">0507-1352-6010</a> (공간) / <a href="tel:01033191160">010-3319-1160</a> (대표)</dd>
+          <dt>이메일</dt><dd><a href="mailto:singlemarks@gmail.com">singlemarks@gmail.com</a></dd>
+          <dt>홈페이지</dt><dd><a href="https://singlemarksbucket.com/" target="_blank" rel="noopener">singlemarksbucket.com</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>장서영 × <span class="quote-brand">'           '</span> (작은따옴표) — Be myself, Be yourself, Be ourselves.</span>
+      <span>Since 2014 · 13년차</span>
+    </div>
+  </div>
+</footer>
+
+<!-- hover peek float -->
+<div id="peek-float"><img src="" alt=""></div>
+<!-- lightbox -->
+<div id="lightbox"><img src="" alt=""></div>
+
+<script>
+(function(){
+  /* ---------- view switching (인물/공간 탭) ---------- */
+  var tabs = document.querySelectorAll('.nav-tab');
+  var views = { person: document.getElementById('view-person'), space: document.getElementById('view-space') };
+  function show(view, push){
+    Object.keys(views).forEach(function(k){
+      views[k].classList.toggle('active', k === view);
+    });
+    tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.view === view); });
+    if (push !== false) history.replaceState(null, '', '#' + view);
+    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    requestAnimationFrame(revealCheck);
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.dataset.view); }); });
+  if (location.hash === '#space') show('space', false);
+  window.addEventListener('hashchange', function(){
+    if (location.hash === '#space') show('space', false);
+    if (location.hash === '#person') show('person', false);
+  });
+
+  /* ---------- subnav chips (스크롤 앵커) ---------- */
+  document.querySelectorAll('.chip').forEach(function(c){
+    c.addEventListener('click', function(){
+      var el = document.getElementById(c.dataset.target);
+      if (el) {
+        var y = el.getBoundingClientRect().top + window.pageYOffset - 120;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ---------- scroll progress ---------- */
+  var prog = document.getElementById('progress');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+    prog.style.width = pct + '%';
+  }, { passive: true });
+
+  /* ---------- reveal on scroll ---------- */
+  var io = null;
+  function revealCheck(){
+    if (io) io.disconnect();
+    io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.page.active .reveal:not(.visible)').forEach(function(el){ io.observe(el); });
+  }
+  revealCheck();
+
+  /* ---------- hover image peek ---------- */
+  var float = document.getElementById('peek-float');
+  var floatImg = float.querySelector('img');
+  var hoverable = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  document.querySelectorAll('.peek').forEach(function(p){
+    if (hoverable) {
+      p.addEventListener('mouseenter', function(){
+        floatImg.src = p.dataset.img;
+        float.style.display = 'block';
+      });
+      p.addEventListener('mousemove', function(ev){
+        var w = 286, hgt = 196, pad = 18;
+        var x = ev.clientX + pad, y = ev.clientY + pad;
+        if (x + w > window.innerWidth - 8)  x = ev.clientX - w - pad;
+        if (y + hgt > window.innerHeight - 8) y = ev.clientY - hgt - pad;
+        float.style.left = x + 'px';
+        float.style.top  = y + 'px';
+      });
+      p.addEventListener('mouseleave', function(){ float.style.display = 'none'; });
+    }
+    /* 터치 기기: 탭하면 라이트박스로 크게 보기 */
+    p.addEventListener('click', function(){
+      if (!hoverable) openLightbox(p.dataset.img, '');
+    });
+  });
+
+  /* ---------- lightbox ---------- */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  function openLightbox(src, alt){
+    lbImg.src = src; lbImg.alt = alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('img.zoomable').forEach(function(img){
+    img.addEventListener('click', function(){ openLightbox(img.src, img.alt); });
+  });
+  lb.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLightbox(); });
+
+  /* ---------- accordion expand/collapse all ---------- */
+  document.querySelectorAll('.acc-toggle-all').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var group = document.querySelectorAll('details.acc[data-group="' + btn.dataset.group + '"]');
+      var anyClosed = Array.prototype.some.call(group, function(d){ return !d.open; });
+      group.forEach(function(d){ d.open = anyClosed; });
+      btn.textContent = anyClosed ? '모두 접기' : '모두 펼치기';
+    });
+  });
+})();
+</script>
+</body>
+</html>
