@@ -266,15 +266,12 @@ ul.list li::before { content:""; position:absolute; left:4px; top:19px; width:7p
 
 /* ---------- hover image peek ---------- */
 .peek { border-bottom:1.5px dashed var(--accent); cursor:help; }
-.peek::after { content:" 📷"; font-size:.8em; }
 .peek.peek-off { border-bottom:none; cursor:inherit; }
-.peek.peek-off::after { content:""; }
 #peek-float {
   position:fixed; z-index:300; pointer-events:none; display:none;
   border-radius:12px; overflow:hidden; box-shadow:var(--shadow-h); border:3px solid var(--white);
 }
 #peek-float img { width:280px; height:190px; object-fit:cover; }
-@media (hover:none){ .peek::after { content:" 📷"; } }
 
 /* ---------- lightbox ---------- */
 #lightbox {
@@ -694,7 +691,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
         <div class="glance-text">
           <span class="glance-num">05</span>
           <span class="glance-title">2026 SBS 소개</span>
-          <span class="glance-desc">&lt;생방송 투데이&gt; 4035회 '반전 매력의 신림동' 편 공간 소개. <a href="https://www.youtube.com/watch?v=iysaxoWzLp4" target="_blank" rel="noopener">경희대 V.O.U. 휴먼다큐</a> 촬영지.</span>
+          <span class="glance-desc"><span class="peek" data-img="website_assets/sangsang.jpg">&lt;생방송 투데이&gt; 4035회 '반전 매력의 신림동' 편 공간 소개</span>. <a href="https://www.youtube.com/watch?v=iysaxoWzLp4" target="_blank" rel="noopener">경희대 V.O.U. 휴먼다큐</a> 촬영지.</span>
         </div>
       </article>
       <article class="glance-card text-only">
@@ -793,7 +790,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
         <caption>미디어 소개 이력</caption>
         <thead><tr><th>연도</th><th>매체 / 프로그램</th><th>비고</th></tr></thead>
         <tbody>
-          <tr><td data-label="연도">2026.06.23</td><td data-label="매체 / 프로그램">SBS &lt;생방송 투데이&gt; 4035회 '반전 매력의 신림동'</td><td data-label="비고">공간 소개</td></tr>
+          <tr><td data-label="연도">2026.06.23</td><td data-label="매체 / 프로그램"><span class="peek" data-img="website_assets/sangsang.jpg">SBS &lt;생방송 투데이&gt; 4035회 '반전 매력의 신림동'</span></td><td data-label="비고">공간 소개</td></tr>
           <tr><td data-label="연도">2026</td><td data-label="매체 / 프로그램">경희대 방송국 V.O.U. 휴먼다큐 <a href="https://www.youtube.com/watch?v=iysaxoWzLp4" target="_blank" rel="noopener">[나다움을 향해서] ▶ 영상 보기</a></td><td data-label="비고">공간 · 커뮤니티 촬영</td></tr>
           <tr><td data-label="연도">2017</td><td data-label="매체 / 프로그램">국민방송 KTV &lt;보물썸&gt;</td><td data-label="비고"><span class="peek" data-img="website_assets/img_artrash.jpg">ARTRASH</span> 소개</td></tr>
           <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">TV조선 다큐 &lt;신림이 바뀐다&gt;</td><td data-label="비고">공간 · 활동 소개</td></tr>
