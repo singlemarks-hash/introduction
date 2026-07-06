@@ -239,6 +239,8 @@ ul.list li::before { content:""; position:absolute; left:4px; top:19px; width:7p
 /* ---------- hover image peek ---------- */
 .peek { border-bottom:1.5px dashed var(--accent); cursor:help; }
 .peek::after { content:" 📷"; font-size:.8em; }
+.peek.peek-off { border-bottom:none; cursor:inherit; }
+.peek.peek-off::after { content:""; }
 #peek-float {
   position:fixed; z-index:300; pointer-events:none; display:none;
   border-radius:12px; overflow:hidden; box-shadow:var(--shadow-h); border:3px solid var(--white);
@@ -497,7 +499,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
               <tr><td data-label="연도">2026.07.02</td><td data-label="매체 / 프로그램"><span class="peek" data-img="website_assets/img_mbc.jpg">MBC &lt;구해줘! 홈즈&gt; 355회 '연애의 집 참견'</span></td><td data-label="비고">출연 (관악산 뷰 옥탑방)</td></tr>
               <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">MBC 다큐 &lt;문화 창업, 세상을 바꾸다&gt;</td><td data-label="비고">출연</td></tr>
               <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">TV조선 다큐 &lt;신림이 바뀐다&gt; / &lt;그들이 사는 세상&gt;</td><td data-label="비고">출연</td></tr>
-              <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">SBS 뉴스 &lt;아이디어가 세상을 바꾼다&gt;</td><td data-label="비고">'ARTRASH' 출연</td></tr>
+              <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">SBS 뉴스 &lt;아이디어가 세상을 바꾼다&gt;</td><td data-label="비고"><span class="peek" data-img="website_assets/img_artrash.jpg">'ARTRASH'</span> 출연</td></tr>
               <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">현대 HCN 뉴스</td><td data-label="비고">출연</td></tr>
               <tr><td data-label="연도">2015</td><td data-label="매체 / 프로그램">MBC 다큐 &lt;살맛 나는 세상&gt;</td><td data-label="비고">신림역 게릴라 축제</td></tr>
               <tr><td data-label="연도">2015</td><td data-label="매체 / 프로그램">OBS 다큐 &lt;이것이 인생&gt;</td><td data-label="비고">출연</td></tr>
@@ -519,7 +521,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
           <li>2019 / 서울시 청년자치정부 위원 · 관악구 청년정책위원회 등 지역 위원 활동 다수</li>
           <li>2018 / 서울 문화예술연대 네트워크 임원</li>
           <li>2017 / 박원순 서울시장 청년 간담회 '비정상회담' 총감독</li>
-          <li>2015 ~ / 전국 친환경 예술 프로젝트 'ARTRASH' 대표 (영국 런던 Kingston Korean Festival 진출)</li>
+          <li>2015 ~ / 전국 친환경 예술 프로젝트 <span class="peek" data-img="website_assets/img_artrash.jpg">'ARTRASH'</span> 대표 (영국 런던 Kingston Korean Festival 진출)</li>
           <li>2015 ~ / <span class="quote-brand">'     '</span> 학당(대안학교) 운영</li>
           <li>2014 ~ 현재 / 문화 브랜드 + Brunch Cafe &amp; Dining Bar 공간 <span class="quote-brand">'     '</span>(작은따옴표) 창업 · 운영 대표 — 13년차</li>
         </ul>
@@ -709,7 +711,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
         <tbody>
           <tr><td data-label="연혁">2014 ~</td><td data-label="활동">Culture Design Corporation <span class="quote-brand">'           '</span> 설립 · 운영</td><td data-label="비고">13년차</td></tr>
           <tr><td data-label="연혁">2015 ~</td><td data-label="활동"><span class="quote-brand">'           '</span> 학당 (대안학교) 운영</td><td data-label="비고">나다움 교육</td></tr>
-          <tr><td data-label="연혁">2015 ~</td><td data-label="활동">전국 친환경 예술 축제 'ARTRASH'</td><td data-label="비고">영국 런던 페스티벌 진출</td></tr>
+          <tr><td data-label="연혁">2015 ~</td><td data-label="활동">전국 친환경 예술 축제 <span class="peek" data-img="website_assets/img_artrash.jpg">'ARTRASH'</span></td><td data-label="비고">영국 런던 페스티벌 진출</td></tr>
           <tr><td data-label="연혁">2015</td><td data-label="활동">서울 혁신상 대상 · 미래부 장관 메달</td><td data-label="비고">수상</td></tr>
           <tr><td data-label="연혁">2015~2022</td><td data-label="활동">서울시 · 관악문화재단 · 사회적기업진흥원 등 공공 협업</td><td data-label="비고">20건 이상</td></tr>
           <tr><td data-label="연혁">2023 ~</td><td data-label="활동">버킷리스트 커뮤니티 <span class="peek" data-img="website_assets/img_bbk2.jpg">'100*100ket(백백킷)'</span> 운영</td><td data-label="비고">4년째</td></tr>
@@ -752,9 +754,9 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
         <tbody>
           <tr><td data-label="연도">2026.06.23</td><td data-label="매체 / 프로그램">SBS &lt;생방송 투데이&gt; 4035회 '반전 매력의 신림동'</td><td data-label="비고">공간 소개</td></tr>
           <tr><td data-label="연도">2026</td><td data-label="매체 / 프로그램">경희대 방송국 V.O.U. 휴먼다큐 <a href="https://www.youtube.com/watch?v=iysaxoWzLp4" target="_blank" rel="noopener">[나다움을 향해서] ▶ 영상 보기</a></td><td data-label="비고">공간 · 커뮤니티 촬영</td></tr>
-          <tr><td data-label="연도">2017</td><td data-label="매체 / 프로그램">국민방송 KTV &lt;보물썸&gt;</td><td data-label="비고">ARTRASH 소개</td></tr>
+          <tr><td data-label="연도">2017</td><td data-label="매체 / 프로그램">국민방송 KTV &lt;보물썸&gt;</td><td data-label="비고"><span class="peek" data-img="website_assets/img_artrash.jpg">ARTRASH</span> 소개</td></tr>
           <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">TV조선 다큐 &lt;신림이 바뀐다&gt;</td><td data-label="비고">공간 · 활동 소개</td></tr>
-          <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">SBS 뉴스 &lt;아이디어가 세상을 바꾼다&gt;</td><td data-label="비고">ARTRASH 소개</td></tr>
+          <tr><td data-label="연도">2016</td><td data-label="매체 / 프로그램">SBS 뉴스 &lt;아이디어가 세상을 바꾼다&gt;</td><td data-label="비고"><span class="peek" data-img="website_assets/img_artrash.jpg">ARTRASH</span> 소개</td></tr>
           <tr><td data-label="연도">2015</td><td data-label="매체 / 프로그램">MBC &lt;살맛 나는 세상&gt; · OBS &lt;이것이 인생&gt; 외</td><td data-label="비고">공간 · 프로젝트 소개</td></tr>
         </tbody>
       </table>
@@ -871,8 +873,13 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
   var floatImg = float.querySelector('img');
   var hoverable = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
   document.querySelectorAll('.peek').forEach(function(p){
+    /* 이미지가 아직 없으면 호버 표시를 숨긴다 (파일 추가 시 자동 활성화) */
+    var probe = new Image();
+    probe.onerror = function(){ p.classList.add('peek-off'); };
+    probe.src = p.dataset.img;
     if (hoverable) {
       p.addEventListener('mouseenter', function(){
+        if (p.classList.contains('peek-off')) return;
         floatImg.src = p.dataset.img;
         float.style.display = 'block';
       });
@@ -888,7 +895,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
     }
     /* 터치 기기: 탭하면 라이트박스로 크게 보기 */
     p.addEventListener('click', function(){
-      if (!hoverable) openLightbox(p.dataset.img, '');
+      if (!hoverable && !p.classList.contains('peek-off')) openLightbox(p.dataset.img, '');
     });
   });
 
