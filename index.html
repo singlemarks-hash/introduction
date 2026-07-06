@@ -109,9 +109,13 @@ section { padding:64px 0 8px; }
 .hero h1 { font-size:clamp(38px,6vw,58px); font-weight:800; letter-spacing:-.03em; line-height:1.15; }
 .hero h1 small { display:block; font-size:clamp(15px,2vw,19px); font-weight:500; color:var(--gray); letter-spacing:.06em; margin-top:8px; }
 .tagline {
-  display:inline-block; margin-top:22px;
+  display:inline-block; margin-top:22px; line-height:1.45;
   font-size:clamp(17px,2.6vw,23px); font-weight:800; color:var(--accent);
   padding-bottom:10px; border-bottom:4px solid var(--accent);
+}
+.hero-impact {
+  display:block; margin-top:18px;
+  font-size:clamp(14.5px,1.9vw,17.5px); font-weight:600; color:var(--gray);
 }
 .hero-img { margin-top:36px; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-h); }
 .hero-img img { width:100%; max-height:460px; object-fit:cover; }
@@ -311,7 +315,8 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
   <header class="hero wrap">
     <span class="eyebrow">인물 소개서 | PROFILE</span>
     <h1>장서영 <small>JANG Seo Yeong</small></h1>
-    <span class="tagline">버킷리스트에 미친 청년, CULTURE DESIGNER</span>
+    <span class="tagline">모두가 나답게 살아갈 수 있는 세상을 만들어가는<br>버킷리스트에 미친 청년, CULTURE DESIGNER</span>
+    <span class="hero-impact">꿈을 적는 사람은 많지만, 13년째 삶으로 증명해 온 사람은 드뭅니다.</span>
   </header>
 
   <!-- A-2 프로필 표 -->
@@ -403,7 +408,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
   <section id="p-bucket" class="wrap reveal">
     <div class="sec-label">SECTION 1</div>
     <h2 class="sec-title">버킷리스트를 삶으로 증명하는 사람</h2>
-    <p class="lead">12년째 버킷리스트를 적고, 이뤄왔습니다. 버킷리스트는 '언젠가의 소망 목록'이 아니라 <strong>'지금 당장의 실행 계획'</strong>. 카메라가 따라가기만 해도 서사가 완성되는 인물입니다.</p>
+    <p class="lead">13년째 버킷리스트를 적고, 이뤄왔습니다. 버킷리스트는 '언젠가의 소망 목록'이 아니라 <strong>'지금 당장의 실행 계획'</strong>.</p>
 
     <div class="tbl-card">
       <table class="tbl-label">
@@ -425,7 +430,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
         <thead><tr><th>기간</th><th>커뮤니티</th><th>역할 · 규모</th></tr></thead>
         <tbody>
           <tr><td data-label="기간">2023 ~ 현재</td><td data-label="커뮤니티"><span class="peek" data-img="website_assets/img_bbk2.jpg">100*100ket (백백킷)</span> — 함께 버킷리스트를 이루는 커뮤니티</td><td data-label="역할 · 규모">운영 · 4년째</td></tr>
-          <tr><td data-label="기간">2026.07 ~</td><td data-label="커뮤니티">동행클럽 '버킷리스트 클럽' — 커뮤니티형 스터디</td><td data-label="역할 · 규모">클럽장 · 24명 완주 리드</td></tr>
+          <tr><td data-label="기간">2026.08 ~</td><td data-label="커뮤니티">동행클럽 '버킷리스트 클럽' — 커뮤니티형 스터디</td><td data-label="역할 · 규모">클럽장 · 24명 완주 리드</td></tr>
           <tr><td data-label="기간">2025.06</td><td data-label="커뮤니티"><span class="peek" data-img="website_assets/img_leader.jpg">넷플연가 '우리가 꿈꾸는 세계는 현실이 된다'</span></td><td data-label="역할 · 규모">모임장</td></tr>
         </tbody>
       </table>
@@ -443,6 +448,8 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
       <span class="tag">#싱어송라이터</span>
       <span class="tag">#12년차솔로</span>
       <span class="tag">#옥탑방라이프</span>
+      <span class="tag">#낭만</span>
+      <span class="tag" title="2015 서울 혁신상 대상 수상">#혁신가</span>
     </div>
   </section>
 
@@ -458,7 +465,7 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
           <tr><td data-label="포인트"><strong class="em">살아있는 서사</strong></td><td data-label="내용">위기 → 질문 → 결단 → 실행, 현재진행형 드라마</td><td data-label="근거">13년차 자영업 · 억대의 빚 · 100개의 꿈</td></tr>
           <tr><td data-label="포인트"><strong class="em">방송 검증</strong></td><td data-label="내용">카메라·인터뷰에 익숙한 검증된 출연자</td><td data-label="근거"><span class="peek" data-img="website_assets/img_mbc.jpg">2026 MBC 구해줘홈즈</span> 외 MBC·SBS·TV조선·OBS 다수</td></tr>
           <tr><td data-label="포인트"><strong class="em">전달력</strong></td><td data-label="내용">말과 음악으로 푸는 스토리텔러</td><td data-label="근거"><span class="peek" data-img="website_assets/img_ted.jpg">TED 3회</span> · 전국 강연 수십 회 · 싱어송라이터</td></tr>
-          <tr><td data-label="포인트"><strong class="em">입체 캐릭터</strong></td><td data-label="내용">예능적 캐릭터 + 다큐적 깊이 동시 보유</td><td data-label="근거">13년차 대표 / 12년차 솔로 / 옥탑방 자취</td></tr>
+          <tr><td data-label="포인트"><strong class="em">입체 캐릭터</strong></td><td data-label="내용">예능적 캐릭터 + 다큐적 깊이 동시 보유</td><td data-label="근거">13년차 대표 / 12년차 솔로 / 옥탑방 자취 / 예술가 캐릭터 (그림·디자인 전공 / 뮤지션(밴드))</td></tr>
         </tbody>
       </table>
     </div>
@@ -470,8 +477,8 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
           <tr><th>밀착 다큐 / 리얼리티</th><td>'3일에 하나씩, 100개의 꿈' — 버킷리스트 달성 과정을 따라가는 관찰형 콘텐츠. 성공과 실패가 모두 서사가 되는 리얼타임 프로젝트.</td></tr>
           <tr><th>토크 · 인터뷰</th><td>'13년차 자영업자의 위기와 꿈', '나답게 산다는 것' — TED 3회 연사의 검증된 스토리텔링.</td></tr>
           <tr><th>연애 · 라이프 예능</th><td>12년차 솔로 · 옥탑방 자취 · 꿈에 미친 남자 — 연애 리얼리티, 하우스 예능과의 자연스러운 접점.</td></tr>
-          <tr><th>음악 콘텐츠</th><td>싱어송라이터로서 자작곡 퍼포먼스, 라이브 공연 콘텐츠 소화 가능.</td></tr>
-          <tr><th>캠페인 · 브랜드</th><td>'당신의 벽에는 어떤 꿈이 적혀 있나요?' — 버킷리스트 참여형 캠페인. 신년·연말 시즌 기획과의 궁합.</td></tr>
+          <tr><th>음악 콘텐츠</th><td>싱어송라이터&amp;밴드로서 퍼포먼스, 라이브 공연 콘텐츠 소화 가능.</td></tr>
+          <tr><th>캠페인 · 브랜드</th><td>'당신의 죽기 전에, 이루고 싶은 꿈, 버킷리스트는?' — 버킷리스트 참여형 캠페인. 신년·연말 시즌 기획과의 궁합.</td></tr>
         </tbody>
       </table>
     </div>
@@ -510,9 +517,9 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
       <summary>주요 이력 <span class="badge">2014 ~ 현재</span><span class="chev">▾</span></summary>
       <div class="acc-body">
         <ul class="list">
-          <li>2014 ~ 현재 / 문화 브랜드 <span class="quote-brand">'     '</span>(작은따옴표) 창업 · 운영 대표 — 13년차</li>
+          <li>2014 ~ 현재 / 문화 브랜드 + Brunch Cafe &amp; Dining Bar 공간 <span class="quote-brand">'     '</span>(작은따옴표) 창업 · 운영 대표 — 13년차</li>
           <li>2023 ~ 현재 / 버킷리스트 커뮤니티 <span class="peek" data-img="website_assets/img_bbk2.jpg">'100*100ket(백백킷)'</span> 운영 — 4년째</li>
-          <li>2026. 07 ~ / 동행클럽 '버킷리스트 클럽' 클럽장</li>
+          <li>2026. 08 ~ / 동행클럽 '버킷리스트 클럽' 클럽장</li>
           <li>2025. 06 / <span class="peek" data-img="website_assets/img_leader.jpg">넷플연가 모임장</span> — '우리가 꿈꾸는 세계는 현실이 된다'</li>
           <li>2015 ~ / 전국 친환경 예술 프로젝트 'ARTRASH' 대표 (영국 런던 Kingston Korean Festival 진출)</li>
           <li>2015 ~ / <span class="quote-brand">'     '</span> 학당(대안학교) 운영</li>
@@ -524,13 +531,14 @@ footer { margin-top:72px; background:var(--bg-card); border-top:1px solid var(--
     </details>
 
     <details class="acc" data-group="p-acc">
-      <summary>수상 <span class="badge">4건</span><span class="chev">▾</span></summary>
+      <summary>수상 <span class="badge">5건</span><span class="chev">▾</span></summary>
       <div class="acc-body">
         <ul class="list">
           <li>2015 / '서울 혁신상' 대상</li>
           <li>2015 / 미래창조과학부 장관 우수 창업팀 메달</li>
           <li>2015 / 창업 오디션 '슈퍼끼어로' 2위</li>
           <li>2019 / 관악구청 표창장</li>
+          <li>2025 / 관악구청 표창장</li>
         </ul>
       </div>
     </details>
